@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="{CHARSET}">
+		<title></title>
+		<meta name="viewport" content="width=device-width, user-scalable=0, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<style type="text/css">
+			ul,
+			li {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+			}
+			html,
+			body {
+				height: 100%;
+			}
+			body {
+				background: url(https://duud.cn/attachment/images/8/2017/09/kHtI8IsyT6y64h6t187h440gI7HT55.png) #000;
+				background-size: cover;
+				margin: 0;
+				font-family: Helvetica, sans-serif;
+				overflow: hidden;
+			}
+			.element {
+				width: 150px;
+				height: 150px;
+				text-align: center;
+				cursor: default;
+			}
+			.element img {
+				width: 100%;
+				height: 100%;
+				border-radius: 50%;
+				color: rgba(127, 255, 255, 0.75);
+			}
+		</style>
+		<script src="js/three.min.js"></script>
+		<script src="js/tween.min.js"></script>
+		<script src="js/shuju.js"></script>
+		<script src="js/sfasd.js"></script>
+	</head>
+
+	<body>
+		<div id="container" style="position:relative;z-index:2;display:none;opacity: 0;"></div>
+		<canvas class="canvas" style="position:relative;z-index:2;display: none;opacity: 0;"></canvas>
+		<script type="text/javascript">
+			
+			/* 默认图片列表 */
+			var placeholder_image_arr = ["https:\/\/duud.cn\/attachment\/images\/8\/2017\/07\/JzH4bUkwuj4JP0kwN6uhbJpk0kNH4c.jpg"];
+			var placeholder_image_cnt = 1;
+			var placeholder_image_index = 0;
+			var default_placeholder_image = "https://duud.cn/attachment/images/8/2017/07/JzH4bUkwuj4JP0kwN6uhbJpk0kNH4c.jpg";
+			/* 已经签到的用户列表 */
+			var placeholder_image = default_placeholder_image;
+			var table = new Array;
+			for(var i = 0; i < 160; i++) {
+				table[i] = new Object();
+				if(i < personArray.length) {
+					table[i] = personArray[i];
+					table[i].src = personArray[i].image;
+				} else {
+					if(placeholder_image_cnt > 0) {
+						if(placeholder_image_index >= placeholder_image_cnt) {
+							placeholder_image_index = 0;
+						}
+						placeholder_image = placeholder_image_arr[placeholder_image_index];
+						placeholder_image_index++;
+					}
+					table[i].src = placeholder_image;
+				}
+				table[i].p_x = i % 20 + 1;
+				table[i].p_y = Math.floor(i / 20) + 1;
+			}
+			//打乱数组顺序
+			table = table.sort(function() {
+				return Math.random()
+			});
+			/* 动画墙显示 屏 列表 */
+//			var centerShow = "#rectangle|#circle|";
+			var centerShow = "#countdown 10|#time|艾斯佰丽欢迎您|#icon img/1234.png|#sphere|#helix|#torus";
+			/* 动画墙 切换时间？做什么用？ */
+//			var show_interval = "0"; // 间隔时间
+			var return_array = new Array();
+
+			function getArrayItems(arr, num) {
+				//新建一个数组,将传入的数组复制过来,用于运算,而不要直接操作传入的数组;
+				var temp_array = new Array();
+				for(var index in arr) {
+					temp_array.push(arr[index]);
+				}
+				//取出的数值项,保存在此数组
+				for(var i = 0; i < num; i++) {
+					//判断如果数组还有可以取出的元素,以防下标越界
+					if(temp_array.length > 0) {
+						//在数组中产生一个随机索引
+						var arrIndex = Math.floor(Math.random() * temp_array.length);
+						//将此随机索引的对应的数组元素值复制出来
+						return_array[i] = temp_array[arrIndex];
+						//然后删掉此索引的数组元素,这时候temp_array变为新的数组
+						temp_array.splice(arrIndex, 1);
+					} else {
+						//数组中数据项取完后,退出循环,比如数组本来只有10项,但要求取出20项.
+						return false;
+					}
+				}
+				return return_array;
+			}
+			getArrayItems(personArray, 50);
+			var container = document.querySelector("#container");
+			var conCanvas = document.querySelector(".canvas")
+			function senddh() {
+				conCanvas.style.display = "block";
+				conCanvas.style.opacity = "1";
+				container.style.opacity = "1";
+			}
+			function fadeout(ele, opacity,time) {
+				if(ele) {
+					var v = ele.style.filter.replace("alpha(opacity=", "").replace(")", "") || ele.style.opacity || 100;
+					v < 1 && (v = v * 100);
+					var timer = null;
+					timer = setInterval(function() {
+						if(v - 10 >= 0) {
+							v -= 10;
+							ele.style.opacity = v/100;
+						} else {
+							ele.style.display = "none"
+							clearInterval(timer);
+						}
+					}, 100);
+				}
+			}
+		</script>
+		<script src="js/CSS3DRenderer.js"></script>
+		<script src="js/123.js"></script>
+		<script type="text/javascript">
+			window.onload = function() {
+				S.Drawing.init('.canvas');
+				senddh()
+				S.init();
+				S.UI.simulate(centerShow);
+				init();
+				animate();
+				transform(targets.table, 2000, 'table', 10);
+
+			}
+
+			
+		</script>
+
+	</body>
+
+</html>

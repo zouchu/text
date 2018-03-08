@@ -1,0 +1,462 @@
+$sc:50;
+body,p,ul {
+    margin: 0;
+    padding: 0;
+}
+ul,li {
+    list-style: none;
+}
+html{
+    width: 100%;
+    height: 100%;
+    body{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: url(../img/mg.png) no-repeat;
+         background-size: cover;
+        .lottory-user{
+            width: 100%;
+            height: 70%;
+            padding-top:60/$sc+rem;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            .user-onbtn{
+                width: 230/$sc+rem;
+                height:30/$sc+rem;
+                position: absolute;
+                bottom: -20px;
+                left: 36%;
+                z-index: 100;
+                display: flex;
+                justify-content: space-around;
+                span{
+                    display: block;
+                    width: 50/$sc+rem;
+                    height: 12/$sc+rem;
+                    line-height: 15/$sc+rem;
+                    padding: 5px 5px 11px 15px;
+                    border: 2px solid #fff;
+                    border-radius: 8px;
+                    font-weight: bolder;
+                    font-size: 10/$sc+rem;
+                    color: #fff;
+                }
+                .user-btn{
+                    position: relative; 
+                    p{
+                        position: absolute;
+                        width: 50/$sc+rem;
+                        height: 15/$sc+rem;
+                        line-height: 15/$sc+rem;
+                        padding: 5px 10px 11px 10px;
+                        border-radius: 8px;
+                        font-weight: bolder;
+                        color: #E74145;
+                        background-color: #ffde12;
+                        box-shadow: 0 2px 0px 0px rgba(0, 0, 0, 0.15), 0 -6px 0px 0px rgba(255, 158, 37, 1) inset;
+                        text-align: center;
+                        font-size: 10/$sc+rem;
+                        border: none;
+                        cursor: pointer;
+                    }
+                    .user-btn-stop{
+                        display: none;
+                    }
+                }
+            }
+            
+            .lottory-left-user{
+                width: 60%;
+                height: 100%;
+                margin-right: 30px;
+                position: relative;
+                #user-hand{
+                    position: absolute;
+                    top: -90/$sc+rem;
+                    right: 60/$sc+rem;
+                    width: 140/$sc+rem;
+                    height: 60/$sc+rem;
+                    z-index: 200;
+                    .hand{
+                        transform-origin: right bottom; 
+                        position: relative;
+                        display: none;
+                        width: 100%;    
+                        height: 100%;
+                        z-index: 100;
+                        div{
+                            position: absolute;
+                        }
+                        .hand1{
+                            width: 120/$sc+rem;
+                            height: 90/$sc+rem;
+                            background: url(../img/hand.png) no-repeat;
+                            background-size: 100% 100%;
+                        }
+                        .hand2{
+                            width: 120/$sc+rem;
+                            height: 90/$sc+rem;
+                            background: url(../img/handFront.png) no-repeat;
+                            background-size: 100% 100%;
+                            z-index: 150;
+                        }
+                        #hand3{
+                            z-index: 120;
+                            width: 32/$sc+rem;
+                            height: 44/$sc+rem;
+                            border-radius: 10px;  
+                            border: 2px solid #fff;
+                            margin: 52/$sc+rem 0 0 0;
+                            transition: all 2s;
+                            img{
+                                width: 100%;
+                                display: block;
+                                border-bottom: 2px solid #ccc;
+                                border-top-right-radius: 10px;
+                                border-top-left-radius: 10px;
+                            }
+                            span{
+                                width: 100%;
+                                height: 10/$sc+rem;
+                                line-height: 10/$sc+rem;
+                                color: #fff;
+                                font-size: 5/$sc+rem;
+                                text-align: center;
+                                display: block;
+                                background: black;
+                                overflow: hidden;
+                                text-overflow:ellipsis;
+                                white-space: nowrap;
+                                border-bottom-right-radius: 10px;
+                                border-bottom-left-radius: 10px;
+                            }
+                        }
+                    }
+                }
+                #lottory-left-run{
+                    width: 80%;
+                    max-width: 1000px;
+                    margin-right: 50/$sc+rem;
+                    float: right;
+                    .user-img{
+                        width: 100%;
+                        position: relative; 
+                        img{
+                            width: 90%;
+                            z-index: 100;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                        }
+                        .img-two,.img-three{
+                            opacity: 0;
+                        }
+                        .img-four{
+                            z-index: 1000;
+                        }
+                    }
+                }
+                .lottory-left-btn{
+                    position: absolute;
+                    bottom: -20px;
+                    left: 0;
+                    width: 100%;
+                    height: 40/$sc+rem;
+                    display: flex;
+                    .user-awards{
+                         height: 40/$sc+rem;
+                        p{
+                            color: #fff;
+                            font-size:11/$sc+rem ;
+                            line-height: 40/$sc+rem;
+                            float: left;
+                        }
+                        #tagid{
+                            width: 60/$sc+rem;
+                            height: 22/$sc+rem;
+                            border-radius: 5/$sc+rem;
+                            margin: 8/$sc+rem 0;
+                            color: rgb(117, 117, 117);
+                            cursor: pointer;
+                            float: left;
+                        }
+                    }
+                    .user-num{
+                        height: 40/$sc+rem;
+                        padding-left: 10px;
+                        p{
+                             color: #fff;
+                            font-size:11/$sc+rem ;
+                            line-height: 40/$sc+rem;
+                            float: left;
+                        }
+                        #tagnum{
+                            width: 30/$sc+rem;
+                            height: 22/$sc+rem;
+                            border-radius: 5/$sc+rem;
+                            margin: 8/$sc+rem 0;
+                            color: rgb(117, 117, 117);
+                            cursor: pointer;
+                            float: left;
+                        }
+                    }
+                    .user-all{
+                        color: #fff;
+                        font-size:13/$sc+rem ;
+                        line-height: 40/$sc+rem;
+                        padding-left: 14px;
+                    }
+                }
+            }
+            .lottory-right-user{
+                width: 25%;
+                height: 95%;
+                                    overflow: hidden;
+                .user-uls{
+                    width: 100%;
+                    height: 100%;
+                    overflow-y: auto;
+                    li{
+                        width: 100%;
+                        height: 40/$sc+rem;
+                        background: #6a364b;
+                        border-radius: 18/$sc+rem;
+                        margin-top: 5px;
+                        display: flex;
+                        &:hover em{
+                            display: block;
+                        }
+                        .em{
+                            width: 22px;
+                            height: 30px;
+                            cursor: pointer;
+                            display: block;
+                            background: url(../img/lotteryDel.png) no-repeat left center;
+                            margin:  auto 0 ;
+                            margin-left: 20/$sc+rem;
+                            display: none;
+                        }
+                        .user-serial{
+                            width: 20/$sc+rem;
+                            height: 20/$sc+rem;
+                            color: #E62841;
+                            text-align: center;
+                            margin:10/$sc+rem 0 0 10px;
+                            font-size: 13/$sc+rem;
+                            line-height: 20/$sc+rem;
+                            background-color: #FFF;
+                            border-radius: 100%;
+                        }
+                        .user-lusky{
+                            width: 60%;
+                            height: 100%;
+                            img{
+                                width: 35/$sc+rem;
+                                height: 35/$sc+rem;
+                                margin: 2/$sc+rem 8px;
+                                border-radius: 50%;
+                                float: left;
+                            }
+                            span{
+                                width: 60/$sc+rem;
+                                height: 40/$sc+rem;
+                                 font-size: 13/$sc+rem;
+                                 line-height: 40/$sc+rem;
+                                 color: #fff;
+                                 float: left;
+                                 overflow: hidden;
+                                text-overflow:ellipsis;
+                                white-space: nowrap;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.user-uls::-webkit-scrollbar {
+    width: 10px;    
+    height: 10px;
+}
+.user-uls::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 5px rgba(250,150,180,0.2);
+    background: rgba(200,100,190,0.8);
+}
+ .user-uls::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 5px rgba(250,250,250,0.2);
+    border-radius: 0;
+    background: rgba(200,200,200,0.8);
+}
+.div {
+    min-width: 100px;
+    height: 16px;
+    background: #999;
+    font-size: 16/$sc+rem;
+    color: #fff;
+    line-height: 16px;
+    opacity: 0.8;
+    border: 2px solid #333;
+    position: absolute;
+    padding: 10px;
+    border-radius: 8px;
+    top: 40%;
+    left: 50%;
+    z-index: 5000;
+    transform: translate(-50%, -60%);
+}
+//////////////////////////////////////////////////////////////////////////////
+.move .img-one, .move .img-four { opacity: 0; }
+ @keyframes img1 { 
+    0% {}
+    100% {opacity: 1;}
+}
+.move .img-two { 
+    -webkit-animation: img2 0.5s linear infinite; 
+    animation: img2 0.5s linear infinite; 
+    -webkit-transition-property: all; 
+    transition-property: all; 
+    opacity: 0; 
+}
+@-webkit-keyframes img2 { 
+    0%  {}
+    50% {opacity: 1;}
+    100%{}
+}
+@keyframes img2 { 
+    0% {}
+    50% {opacity: 1;}
+    100% {}
+}
+.move .img-three { 
+    -webkit-animation: img3 0.5s linear infinite 0.25s;
+     animation: img3 0.5s linear infinite 0.25s; 
+     -webkit-transition-property: all; 
+     transition-property: all; 
+     opacity: 0; 
+}
+@-webkit-keyframes img3 {
+    0% {}
+    50% {opacity: 1;}
+    100% {}
+}
+@keyframes img3 {
+    0% {}
+    50% {opacity: 1;}
+    100% {}
+}
+
+/////////////////////////////////////////////////////////////////////////////
+
+.moves .hand { 
+    transform:translate(-118/$sc+rem,30/$sc+rem) rotate(-85deg);
+    animation: move 2s ease-in-out forwards;
+    -moz-animation: move 2s ease-in-out forwards;
+    -webkit-animation: move 2s ease-in-out forwards;
+    -o-animation: move 2s ease-in-out forwards;
+    -webkit-transition-property: all; 
+    transition-property: all; 
+    display: block !important; 
+}
+.moves>.hand>.hand2{
+    opacity: 0;
+}
+.moves>.hand>#hand3{
+    opacity: 0;
+}
+ @keyframes move{ 
+    0%  {transform: translate(0px,0px); }
+    40% {transform: translate(-70/$sc+rem,10/$sc+rem) rotate(-25deg);}
+    80% {transform:translate(-142/$sc+rem,30/$sc+rem) rotate(-85deg);}
+    100%{transform:translate(-142/$sc+rem,30/$sc+rem) rotate(-85deg);}
+ }
+@-webkit-keyframes move{ 
+    0%{transform: translate(0px,0px);}
+    40% {transform: translate(-70/$sc+rem,10/$sc+rem) rotate(-25deg);}
+    80% {transform:translate(-142/$sc+rem,30/$sc+rem) rotate(-85deg);}
+    100%{transform:translate(-142/$sc+rem,30/$sc+rem) rotate(-85deg);}
+}
+@-moz-keyframes move{
+    0%{transform: translate(0px,0px);}
+    40% {transform: translate(-70/$sc+rem,10/$sc+rem) rotate(-25deg);}
+    80% {transform:translate(-142/$sc+rem,30/$sc+rem) rotate(-85deg);}
+    100%{transform:translate(-142/$sc+rem,30/$sc+rem) rotate(-85deg);}
+}
+@-o-keyframes move{    
+    0%{transform: translate(0px,0px);}
+    40% {transform: translate(-70/$sc+rem,10/$sc+rem) rotate(-25deg);}
+    80% {transform:translate(-142/$sc+rem,30/$sc+rem) rotate(-85deg);}
+    100%{transform:translate(-142/$sc+rem,30/$sc+rem) rotate(-85deg);}
+}
+
+///////////////////////////////////////////////////////////////////////////
+
+.moving .hand { 
+    animation: head-box 3s ease-in-out forwards;
+    -moz-animation: head-box 3s ease-in-out forwards;
+    -webkit-animation: head-box 3s ease-in-out forwards;
+    -o-animation: head-box 3s ease-in-out forwards;
+    -webkit-transition-property: all; 
+    transition-property: all; 
+    display: block !important; 
+    z-index: 1500; 
+}
+.moving>.hand>.hand2{
+    opacity: 1;
+}
+.moving>.hand>#hand3{
+    opacity: 1;
+}
+@keyframes head-box {
+    0%  {transform:translate(-142/$sc+rem,30/$sc+rem) rotate(-85deg);}
+    30% {transform: translate(-80/$sc+rem,10/$sc+rem) rotate(-25deg);}
+    60% {transform: translate(0px,0px);}
+    100%{transform: translate(0px,0px);}
+}
+@-webkit-keyframes head-box { 
+    0%  {transform:translate(-142/$sc+rem,30/$sc+rem) rotate(-85deg);}
+    30% {transform: translate(-80/$sc+rem,10/$sc+rem) rotate(-25deg);}
+    60% {transform: translate(0px,0px);}
+    100%{transform: translate(0px,0px);}
+}
+@-moz-keyframes head-box{
+    0%  {transform:translate(-142/$sc+rem,30/$sc+rem) rotate(-85deg);}
+    30% {transform: translate(-80/$sc+rem,10/$sc+rem) rotate(-25deg);}
+    60% {transform: translate(0px,0px);}
+    100%{transform: translate(0px,0px);}
+}
+@-o-keyframes head-box{    
+    0%  {transform:translate(-142/$sc+rem,30/$sc+rem) rotate(-85deg);}
+    30% {transform: translate(-80/$sc+rem,10/$sc+rem) rotate(-25deg);}
+    60% {transform: translate(0px,0px);}
+    100%{transform: translate(0px,0px);}
+}
+///////////////////////////////////////////////////////////////////////////////////////
+.lottory-left-user:hover>#user-hand .hand #hand3{
+    transform: translate(140/$sc+rem,20/$sc+rem) scale(1,1);
+}
+.hand3 { 
+    animation: head3 2s ease-in-out;
+    -moz-animation: head3 2s ease-in-out;
+    -webkit-animation: head3 2s ease-in-out;
+    -o-animation: head3 2s ease-in-out;  
+}
+@keyframes head3 {
+    0%  {transform: translate(0px,0px) scale(1,1);}
+    100%{transform: translate(250/$sc+rem,36/$sc+rem) scale(0.5,0.5);}
+}
+@-webkit-keyframes head3 { 
+    0%  {transform: translate(0px,0px) scale(1,1);}
+    100%{transform: translate(250/$sc+rem,36/$sc+rem) scale(0.5,0.5);}
+}
+@-moz-keyframes head3{
+    0%  {transform: translate(0px,0px) scale(1,1);}
+    100%{transform: translate(250/$sc+rem,36/$sc+rem) scale(0.5,0.5);}
+}
+@-o-keyframes head3{    
+    0%  {transform: translate(0px,0px) scale(1,1);}
+    100%{transform: translate(250/$sc+rem,36/$sc+rem) scale(0.5,0.5);}
+}

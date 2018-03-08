@@ -1,0 +1,17 @@
+/*banner*/
+#banner .bannerBg{background:url('../images/hc33.png') no-repeat center center;background-size:cover;height:400px;}
+@media screen and (max-width:992px) {
+    #banner .bannerBg{background:url('../images/hc33_1.png') no-repeat center center;background-size:cover;height:200px;}
+}
+/*banner end*/
+.whiteBg{background:#fff !important;}
+/*三大品牌*/
+.midArea{background:#f9f9f9;padding:20px 0;}
+.midArea>.container{padding-left:0;padding-right:0;}
+/*三大品牌 end*/
+
+/*bootstrap扩展*/
+/*中间块*/
+#serviceClass .panel-body{border:none;}
+#serviceClass .panel-hc > .panel-body>h4{border-bottom:none;}
+#serviceClass .panel-hc > .panel-body>p{display: -webkit-box;-webkit-line-clamp: 3;overflow: hidden;text-overflow: ellipsis;-webkit-box-orient: vertical;}

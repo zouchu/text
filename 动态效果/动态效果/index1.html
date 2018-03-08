@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+		<title>抽奖箱</title>
+		<link rel="stylesheet" type="text/css" href="css/index1.css"/>
+		<script>document.documentElement.style.fontSize = innerWidth/15+"px"</script>
+		<script src="js/index1.js"></script>
+		<script src="js/shuju.js"></script>
+		<script type="text/javascript">
+			
+			
+			var arrId = ["特等奖", "一等奖", "二等奖", "三等奖", "四等奖", "安慰奖"]
+			var optArr = new Array;
+			var optV , optR = [];
+			for (var i = 0; i <arrId.length; i++) {
+			 	optArr[i] = 0;
+			}
+			function change(en) {
+				var opt = en.options[en.selectedIndex];
+				var userUls = document.querySelector(".user-uls");
+				optV = opt.value;
+				userUls.innerHTML = '';
+				optR.length = 0;
+				for (var i = 0;i<optArr[optV].length;i++) {
+					userUls.appendChild(optArr[optV][i]);
+				}
+			}
+			
+			
+		</script>
+	</head>
+	<body>
+		<div class="lottory-user">
+			<div class="user-onbtn">
+				<div class="user-btn">
+					<p class="user-btn-begin">开始抽奖</p>
+					<p class="user-btn-stop">停止</p>
+				</div>
+				<span class="user-anew">重新加载</span>
+			</div>
+			<div class="lottory-left-user">
+				<div id ="lottory-left-run">
+					<div class="user-img">
+						<img class="img-one" src="img/box.png"/>
+						<img class="img-two" src="img/boxLeft.png"/>
+						<img class="img-three" src="img/boxRight.png"/>
+						<img class="img-four" src="img/boxFront.png"/>
+					</div>
+				</div>
+				<div id="user-hand">
+					<div class="hand">
+						<div class="hand1"></div>
+						<div class="hand2"></div>
+						<div id="hand3">
+						</div>
+					</div>
+				</div>
+				<div class="lottory-left-btn">
+					<div class="user-awards">
+						<p>选择奖项 :&nbsp;</p>
+						<select  id="tagid" onchange="change(this)"> 
+						    <option value="-1">--请选择奖项--</option>
+						</select>
+					</div>
+					<div class="user-num">
+						<p>选择人数 :&nbsp;</p>
+						<select id="tagnum">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+						</select>
+					</div>
+					<div class="user-all">
+						共&nbsp;<span id="num"></span>&nbsp;人
+					</div>
+				</div>
+			</div>
+			<div class="lottory-right-user">
+				<ul class="user-uls">
+				</ul>
+			</div>
+		</div>
+		
+	</body>
+</html>

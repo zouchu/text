@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+		<title>3D抽奖</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<script>document.documentElement.style.fontSize = innerWidth/15+"px"</script>
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<script src="https://duud.cn/addons/meepo_xianchang/template/mobile/app/images/3dlottory/js/three.min.js"></script>
+ 		<script src="https://duud.cn/addons/meepo_xianchang/template/mobile/app/images/3dlottory/js/tween.min.js"></script>
+		<script src="js/shuju.js"></script>
+		<script src="js/012.js"></script>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="box">
+			<div class="container">
+				<!--抽奖左边区-->	
+				<div class="lottory-left-box">
+					<p class="lottory-nav">
+						参加抽奖人数：
+						<span id="num"></span>
+					</p>
+					<div class="lottory-photo"></div>
+					<div class="lottory-bar">
+						<p class="lottory-bar-p"></p>
+						<p class="lottory-bar-sec">-----</p>
+						<p class="lottory-bar-p"></p>
+					</div>
+					<div class="lottory-main">
+						<span>一次抽取</span>
+						<select class="selecy">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+						</select>
+						<span>人</span>
+					</div>
+					<div class="lottory-begin"></div>
+				</div>
+				<!--抽奖右边区-->
+				<div class="lottory-right-box">
+					<div class="lottory-title">
+						<span id="award">一等奖</span>- 获奖人数:
+						<span id="number">0</span>
+					</div>
+					<ul class="lottory-title-uls">
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="container" style="display: none;">
+			<p class="container-stop"></p>
+		</div>
+		<div id="modal" class="modal">
+			<div id="modal-content">
+		    	<div class="modal-content-sec">
+		    		<div class="sec-back"></div>
+					<img class="modal-stop" src="img/del_btn.png"/>				    	
+				    <ul class="modal-uls">
+				    	
+				    </ul> 
+		    	</div>
+			</div>
+		</div>
+	</body>
+</html>
+

@@ -1,0 +1,121 @@
+body, p, ul { margin: 0; padding: 0; }
+
+ul, li { list-style: none; }
+
+html { width: 100%; height: 100%; }
+html body { width: 100%; height: 100%; overflow: hidden; background: url(../img/mg.png) no-repeat; background-size: cover; }
+html body .lottory-user { width: 100%; height: 70%; padding-top: 1.2rem; position: relative; display: flex; justify-content: center; }
+html body .lottory-user .user-onbtn { width: 4.6rem; height: 0.6rem; position: absolute; bottom: -20px; left: 36%; z-index: 100; display: flex; justify-content: space-around; }
+html body .lottory-user .user-onbtn span { display: block; width: 1rem; height: 0.24rem; line-height: 0.3rem; padding: 5px 5px 11px 15px; border: 2px solid #fff; border-radius: 8px; font-weight: bolder; font-size: 0.2rem; color: #fff; }
+html body .lottory-user .user-onbtn .user-btn { position: relative; }
+html body .lottory-user .user-onbtn .user-btn p { position: absolute; width: 1rem; height: 0.3rem; line-height: 0.3rem; padding: 5px 10px 11px 10px; border-radius: 8px; font-weight: bolder; color: #E74145; background-color: #ffde12; box-shadow: 0 2px 0px 0px rgba(0, 0, 0, 0.15), 0 -6px 0px 0px #ff9e25 inset; text-align: center; font-size: 0.2rem; border: none; cursor: pointer; }
+html body .lottory-user .user-onbtn .user-btn .user-btn-stop { display: none; }
+html body .lottory-user .lottory-left-user { width: 60%; height: 100%; margin-right: 30px; position: relative; }
+html body .lottory-user .lottory-left-user #user-hand { position: absolute; top: -1.8rem; right: 1.2rem; width: 2.8rem; height: 1.2rem; z-index: 200; }
+html body .lottory-user .lottory-left-user #user-hand .hand { transform-origin: right bottom; position: relative; display: none; width: 100%; height: 100%; z-index: 100; }
+html body .lottory-user .lottory-left-user #user-hand .hand div { position: absolute; }
+html body .lottory-user .lottory-left-user #user-hand .hand .hand1 { width: 2.4rem; height: 1.8rem; background: url(../img/hand.png) no-repeat; background-size: 100% 100%; }
+html body .lottory-user .lottory-left-user #user-hand .hand .hand2 { width: 2.4rem; height: 1.8rem; background: url(../img/handFront.png) no-repeat; background-size: 100% 100%; z-index: 150; }
+html body .lottory-user .lottory-left-user #user-hand .hand #hand3 { z-index: 120; width: 0.64rem; height: 0.88rem; border-radius: 10px; border: 2px solid #fff; margin: 1.04rem 0 0 0; transition: all 2s; }
+html body .lottory-user .lottory-left-user #user-hand .hand #hand3 img { width: 100%; display: block; border-bottom: 2px solid #ccc; border-top-right-radius: 10px; border-top-left-radius: 10px; }
+html body .lottory-user .lottory-left-user #user-hand .hand #hand3 span { width: 100%; height: 0.2rem; line-height: 0.2rem; color: #fff; font-size: 0.1rem; text-align: center; display: block; background: black; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; }
+html body .lottory-user .lottory-left-user #lottory-left-run { width: 80%; max-width: 1000px; margin-right: 1rem; float: right; }
+html body .lottory-user .lottory-left-user #lottory-left-run .user-img { width: 100%; position: relative; }
+html body .lottory-user .lottory-left-user #lottory-left-run .user-img img { width: 90%; z-index: 100; position: absolute; top: 0; left: 0; }
+html body .lottory-user .lottory-left-user #lottory-left-run .user-img .img-two, html body .lottory-user .lottory-left-user #lottory-left-run .user-img .img-three { opacity: 0; }
+html body .lottory-user .lottory-left-user #lottory-left-run .user-img .img-four { z-index: 1000; }
+html body .lottory-user .lottory-left-user .lottory-left-btn { position: absolute; bottom: -20px; left: 0; width: 100%; height: 0.8rem; display: flex; }
+html body .lottory-user .lottory-left-user .lottory-left-btn .user-awards { height: 0.8rem; }
+html body .lottory-user .lottory-left-user .lottory-left-btn .user-awards p { color: #fff; font-size: 0.22rem; line-height: 0.8rem; float: left; }
+html body .lottory-user .lottory-left-user .lottory-left-btn .user-awards #tagid { width: 1.2rem; height: 0.44rem; border-radius: 0.1rem; margin: 0.16rem 0; color: #757575; cursor: pointer; float: left; }
+html body .lottory-user .lottory-left-user .lottory-left-btn .user-num { height: 0.8rem; padding-left: 10px; }
+html body .lottory-user .lottory-left-user .lottory-left-btn .user-num p { color: #fff; font-size: 0.22rem; line-height: 0.8rem; float: left; }
+html body .lottory-user .lottory-left-user .lottory-left-btn .user-num #tagnum { width: 0.6rem; height: 0.44rem; border-radius: 0.1rem; margin: 0.16rem 0; color: #757575; cursor: pointer; float: left; }
+html body .lottory-user .lottory-left-user .lottory-left-btn .user-all { color: #fff; font-size: 0.26rem; line-height: 0.8rem; padding-left: 14px; }
+html body .lottory-user .lottory-right-user { width: 25%; height: 95%; overflow: hidden; }
+html body .lottory-user .lottory-right-user .user-uls { width: 100%; height: 100%; overflow-y: auto; }
+html body .lottory-user .lottory-right-user .user-uls li { width: 100%; height: 0.8rem; background: #6a364b; border-radius: 0.36rem; margin-top: 5px; display: flex; }
+html body .lottory-user .lottory-right-user .user-uls li:hover em { display: block; }
+html body .lottory-user .lottory-right-user .user-uls li .em { width: 22px; height: 30px; cursor: pointer; display: block; background: url(../img/lotteryDel.png) no-repeat left center; margin: auto 0; margin-left: 0.4rem; display: none; }
+html body .lottory-user .lottory-right-user .user-uls li .user-serial { width: 0.4rem; height: 0.4rem; color: #E62841; text-align: center; margin: 0.2rem 0 0 10px; font-size: 0.26rem; line-height: 0.4rem; background-color: #FFF; border-radius: 100%; }
+html body .lottory-user .lottory-right-user .user-uls li .user-lusky { width: 60%; height: 100%; }
+html body .lottory-user .lottory-right-user .user-uls li .user-lusky img { width: 0.7rem; height: 0.7rem; margin: 0.04rem 8px; border-radius: 50%; float: left; }
+html body .lottory-user .lottory-right-user .user-uls li .user-lusky span { width: 1.2rem; height: 0.8rem; font-size: 0.26rem; line-height: 0.8rem; color: #fff; float: left; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.user-uls::-webkit-scrollbar { width: 10px; height: 10px; }
+
+.user-uls::-webkit-scrollbar-thumb { border-radius: 5px; -webkit-box-shadow: inset 0 0 5px rgba(250, 150, 180, 0.2); background: rgba(200, 100, 190, 0.8); }
+
+.user-uls::-webkit-scrollbar-track { -webkit-box-shadow: inset 0 0 5px rgba(250, 250, 250, 0.2); border-radius: 0; background: rgba(200, 200, 200, 0.8); }
+
+.div { min-width: 100px; height: 16px; background: #999; font-size: 0.32rem; color: #fff; line-height: 16px; opacity: 0.8; border: 2px solid #333; position: absolute; padding: 10px; border-radius: 8px; top: 40%; left: 50%; z-index: 5000; transform: translate(-50%, -60%); }
+
+.move .img-one, .move .img-four { opacity: 0; }
+
+@keyframes img1 { 100% { opacity: 1; } }
+.move .img-two { -webkit-animation: img2 0.5s linear infinite; animation: img2 0.5s linear infinite; -webkit-transition-property: all; transition-property: all; opacity: 0; }
+
+@-webkit-keyframes img2 { 50% { opacity: 1; } }
+@keyframes img2 { 50% { opacity: 1; } }
+.move .img-three { -webkit-animation: img3 0.5s linear infinite 0.25s; animation: img3 0.5s linear infinite 0.25s; -webkit-transition-property: all; transition-property: all; opacity: 0; }
+
+@-webkit-keyframes img3 { 50% { opacity: 1; } }
+@keyframes img3 { 50% { opacity: 1; } }
+.moves .hand { transform: translate(-2.36rem, 0.6rem) rotate(-85deg); animation: move 2s ease-in-out forwards; -moz-animation: move 2s ease-in-out forwards; -webkit-animation: move 2s ease-in-out forwards; -o-animation: move 2s ease-in-out forwards; -webkit-transition-property: all; transition-property: all; display: block !important; }
+
+.moves > .hand > .hand2 { opacity: 0; }
+
+.moves > .hand > #hand3 { opacity: 0; }
+
+@keyframes move { 0% { transform: translate(0px, 0px); }
+  40% { transform: translate(-1.4rem, 0.2rem) rotate(-25deg); }
+  80% { transform: translate(-2.84rem, 0.6rem) rotate(-85deg); }
+  100% { transform: translate(-2.84rem, 0.6rem) rotate(-85deg); } }
+@-webkit-keyframes move { 0% { transform: translate(0px, 0px); }
+  40% { transform: translate(-1.4rem, 0.2rem) rotate(-25deg); }
+  80% { transform: translate(-2.84rem, 0.6rem) rotate(-85deg); }
+  100% { transform: translate(-2.84rem, 0.6rem) rotate(-85deg); } }
+@-moz-keyframes move { 0% { transform: translate(0px, 0px); }
+  40% { transform: translate(-1.4rem, 0.2rem) rotate(-25deg); }
+  80% { transform: translate(-2.84rem, 0.6rem) rotate(-85deg); }
+  100% { transform: translate(-2.84rem, 0.6rem) rotate(-85deg); } }
+@-o-keyframes move { 0% { transform: translate(0px, 0px); }
+  40% { transform: translate(-1.4rem, 0.2rem) rotate(-25deg); }
+  80% { transform: translate(-2.84rem, 0.6rem) rotate(-85deg); }
+  100% { transform: translate(-2.84rem, 0.6rem) rotate(-85deg); } }
+.moving .hand { animation: head-box 3s ease-in-out forwards; -moz-animation: head-box 3s ease-in-out forwards; -webkit-animation: head-box 3s ease-in-out forwards; -o-animation: head-box 3s ease-in-out forwards; -webkit-transition-property: all; transition-property: all; display: block !important; z-index: 1500; }
+
+.moving > .hand > .hand2 { opacity: 1; }
+
+.moving > .hand > #hand3 { opacity: 1; }
+
+@keyframes head-box { 0% { transform: translate(-2.84rem, 0.6rem) rotate(-85deg); }
+  30% { transform: translate(-1.6rem, 0.2rem) rotate(-25deg); }
+  60% { transform: translate(0px, 0px); }
+  100% { transform: translate(0px, 0px); } }
+@-webkit-keyframes head-box { 0% { transform: translate(-2.84rem, 0.6rem) rotate(-85deg); }
+  30% { transform: translate(-1.6rem, 0.2rem) rotate(-25deg); }
+  60% { transform: translate(0px, 0px); }
+  100% { transform: translate(0px, 0px); } }
+@-moz-keyframes head-box { 0% { transform: translate(-2.84rem, 0.6rem) rotate(-85deg); }
+  30% { transform: translate(-1.6rem, 0.2rem) rotate(-25deg); }
+  60% { transform: translate(0px, 0px); }
+  100% { transform: translate(0px, 0px); } }
+@-o-keyframes head-box { 0% { transform: translate(-2.84rem, 0.6rem) rotate(-85deg); }
+  30% { transform: translate(-1.6rem, 0.2rem) rotate(-25deg); }
+  60% { transform: translate(0px, 0px); }
+  100% { transform: translate(0px, 0px); } }
+.lottory-left-user:hover > #user-hand .hand #hand3 { transform: translate(2.8rem, 0.4rem) scale(1, 1); }
+
+.hand3 { animation: head3 2s ease-in-out; -moz-animation: head3 2s ease-in-out; -webkit-animation: head3 2s ease-in-out; -o-animation: head3 2s ease-in-out; }
+
+@keyframes head3 { 0% { transform: translate(0px, 0px) scale(1, 1); }
+  100% { transform: translate(5rem, 0.72rem) scale(0.5, 0.5); } }
+@-webkit-keyframes head3 { 0% { transform: translate(0px, 0px) scale(1, 1); }
+  100% { transform: translate(5rem, 0.72rem) scale(0.5, 0.5); } }
+@-moz-keyframes head3 { 0% { transform: translate(0px, 0px) scale(1, 1); }
+  100% { transform: translate(5rem, 0.72rem) scale(0.5, 0.5); } }
+@-o-keyframes head3 { 0% { transform: translate(0px, 0px) scale(1, 1); }
+  100% { transform: translate(5rem, 0.72rem) scale(0.5, 0.5); } }
+
+/*# sourceMappingURL=index1.css.map */
